@@ -1,4 +1,4 @@
-// Ascending bubble sort
+// Descending insertion
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -8,7 +8,7 @@ void insertionSort(int arr[], int n){
         int curr = arr[i];
         int prev = i - 1;
 
-        while(prev >= 0 && arr[prev] > curr){
+        while(prev >= 0 && arr[prev] < curr){
             arr[prev + 1] = arr[prev];
             prev--;
         }
@@ -36,8 +36,3 @@ int main(){
     printArray(arr, n);
     return 0;
 }
-
-
-// Insertion Sort works like sorting playing cards 🃏 in your hand:
-// You pick one element
-// Place it at the correct position in the already sorted part

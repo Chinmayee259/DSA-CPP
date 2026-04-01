@@ -1,4 +1,4 @@
-// Ascending selection sort 
+// Increasing order 
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -6,13 +6,13 @@ using namespace std;
 
 void selectionSort(int arr[], int n){
     for(int i = 0; i < n; i++){
-        int minIndex = i;
+        int maxIndex = i;
         for(int j = i + 1; j < n; j++){
-            if(arr[minIndex] > arr[j]){
-                minIndex = j;
+            if(arr[maxIndex] < arr[j]){
+                maxIndex = j;
             }
         }
-        swap(arr[i], arr[minIndex]);
+        swap(arr[i], arr[maxIndex]);
     }
 }
 
@@ -33,10 +33,3 @@ int main() {
     printArray(arr, n);
     return 0;
 }
-
-
-// Selection Sort is a sorting algorithm that:
-// Repeatedly finds the smallest element
-// And places it at the correct position
-
-//Select the minimum element and swap it with the first unsorted element.

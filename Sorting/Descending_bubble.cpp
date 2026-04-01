@@ -1,4 +1,4 @@
-// Ascending bubblesort
+// Descending bubblesort 
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -8,12 +8,12 @@ void bubbleSort(int arr[], int n){
     for(int i = 0; i < n-1; i++){
         bool isSwap = false;
         for(int j = 0; j < n-i-1; j++){
-            if(arr[j] > arr[j+1]){
+            if(arr[j] < arr[j+1]){
                 swap(arr[j], arr[j+1]);
                 isSwap = true;
             }
         }
-        if(!isSwap){    //After each pass, the largest element goes to the end  
+        if(!isSwap){  
             return;
         }
     }
@@ -39,9 +39,4 @@ int main(){
 }
 
 
-// Output
-// Original Array : 4 2 7 8 3 6 5
-// After sorting : 2 3 4 5 6 7 8
 
-
-// Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order.
