@@ -1,4 +1,6 @@
-#include <iostream>
+// Sum of digits of all the in the vector/array/list
+
+#include<iostream>
 #include<vector>
 using namespace std;
 

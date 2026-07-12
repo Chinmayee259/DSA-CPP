@@ -2,7 +2,19 @@
 using namespace std;
 void prime(int n )
 {
-    for(int i = 2;i<n;i++)
+    // Brute force approach
+    // for(int i = 2;i<n;i++)
+    // {
+    //     if(n%i == 0)
+    //     {
+    //         cout<<"Entered number is not prime";
+    //         return;
+    //     }
+    // }
+    // cout<<"Entered number is a prime number";
+
+    // Optimised approach
+    for(int i = 2;i*i <= n;i++)
     {
         if(n%i == 0)
         {
@@ -11,6 +23,7 @@ void prime(int n )
         }
     }
     cout<<"Entered number is a prime number";
+    
 }
 
 
