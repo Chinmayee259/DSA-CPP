@@ -40,3 +40,5 @@ int main(){
 // -32
 // Enter a number : 145
 // 541
+
+// Time Complexity : O(logn)
